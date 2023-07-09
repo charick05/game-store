@@ -1,0 +1,84 @@
+.gamepage {
+
+   &_top {
+      margin-bottom: 50px;
+      width: 100%;
+      max-height: 530px;
+      height: auto;
+      overflow: hidden;
+
+      & img {
+         width: 100%;
+         background-size: cover;
+         background-repeat: no-repeat;
+      }
+   }
+
+
+
+   &_bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &-video_block {
+         width: 50%;
+         height: 50vh;
+         padding-right: 10px;
+
+         @media(max-width: 665px) {
+            width: 100%;
+            height: 35vh;
+         }
+
+         & iframe {
+            width: 100%;
+            height: 100%;
+         }
+      }
+
+      &-info {
+         position: relative;
+         width: 50%;
+         padding: 10px;
+
+         @media(max-width: 665px) {
+            width: 100%;
+         }
+         
+
+         &_title {
+            margin-bottom: 15px;
+            font-size: clamp(1.25rem, 0.942rem + 1.54vw, 2rem);
+         }
+
+         &_desc {
+            margin-bottom: 20px;
+            font-size: clamp(0.75rem, 0.647rem + 0.51vw, 1rem);
+         }
+
+         &_genre {
+            font-size: 13px;
+            border-radius: 5px;
+            padding: 1px;
+            font-size: clamp(0.563rem, 0.46rem + 0.51vw, 0.813rem);
+      
+            &:not(:last-child) {
+               margin-right: 7px;
+            }
+         }
+
+         &_buy {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0 0;
+
+            & button {
+               font-size: 16px;
+               padding: 5px 15px;
+            }
+         }
+      }
+   }
+}

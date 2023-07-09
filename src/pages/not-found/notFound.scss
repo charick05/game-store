@@ -1,0 +1,20 @@
+.notFound {
+   text-align: center;
+
+   &_title {
+      margin-bottom: 50px;
+   }
+
+   & a {
+      padding: 7px;
+      background-color: #800;
+      border-radius: 10px;
+      transition: background .2s;
+
+      @media(hover: hover) {
+         &:hover  {
+            background-color: #292999;
+         }
+      }
+   }
+}

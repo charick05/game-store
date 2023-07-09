@@ -1,0 +1,235 @@
+.cartList {
+   position: absolute;
+   min-height: 50px;
+   height: auto;
+   right: 0;
+   top: 70px;
+   background-color: rgb(37, 35, 47);
+   z-index: 2;
+
+   &_empty {
+      text-align: center;
+      // padding-top: 10px;
+      width: 32.7%;
+      min-height: 30px;
+
+      & h4 {
+         padding: 5px;
+         font-size: clamp(0.563rem, 0.357rem + 1.03vw, 1.063rem);
+      }
+   }
+
+   &_total {
+
+      &-block {
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         margin-top: 30px;
+         font-size: clamp(1rem, 0.897rem + 0.51vw, 1.25rem);
+      }
+   }
+      
+   &_form {
+      text-align: end;
+      padding: 5px 0;
+      
+      &-button {
+         padding: 4px 7px;
+         margin: 10px 5px;
+         border: none;
+         border-radius: 7px;
+         color: white;
+         background-color: #c00000;
+         cursor: pointer;
+         transition: padding .2s;
+      
+         @media(hover: hover) {
+            &:hover {
+               padding: 4px 25px;
+            }
+         }
+      }
+   }
+
+}
+
+.cartitem {
+   align-items: center;
+   display: grid;
+   grid-template-columns: 27vw 3fr 1fr;
+   border: 1px rgb(25, 26, 28) solid;
+   padding: 10px;
+   font-size: clamp(0.938rem, 0.886rem + 0.26vw, 1.063rem);
+
+   @media(max-width: 665px) {
+      grid-template-columns: 35vw 3fr 1fr;
+   }
+
+   &_delete {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 18px;
+      height: 16px;
+      border-radius: 10px;
+      border: 1px solid;
+      font-size: 13px;
+      cursor: pointer;
+   }
+}
+
+.cart_block {
+
+   &-count {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: red;
+      right: -3px;
+      top: 5px;
+      width: 18px;
+      height: 16px;
+      border-radius: 10px;
+      font-size: 16px;
+   }
+
+}
+
+.cartpage {
+   display: grid;
+   column-gap: 10px;
+   background-color: rgb(37, 35, 47);
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: 200px;
+   border-bottom: 1px #fff solid;
+   border-top-left-radius: 15px;
+   padding: 5px;
+
+   &:not(:last-child) {
+      margin-bottom: 20px;
+   }
+
+   @media(max-width: 800px) {
+      display: flex;
+      justify-content: start;
+      flex-wrap: wrap;
+   }
+
+   &_img {
+      width: 350px;
+
+      @media(max-width: 800px) {
+         margin-bottom: 10px;
+         width: 100%;
+      }
+
+       & img {
+          width: 100%;
+          border-radius: 15px;
+       }
+   }
+
+   &_info {
+      position: relative;
+
+         @media(max-width: 800px) {
+            position: static;
+         }
+
+      &_title {
+         font-size: clamp(0.938rem, 0.707rem + 1.15vw, 1.5rem);
+         
+
+         @media(max-width: 800px) {
+            margin-bottom: 10px;
+         }
+      }
+
+      &_genreBlock {
+         position: absolute;
+         bottom: 10px;
+         font-size: clamp(0.438rem, 0.284rem + 0.77vw, 0.813rem);
+
+         @media(max-width: 800px) {
+            position: inherit;
+            font-size: clamp(0.625rem, 0.548rem + 0.38vw, 0.813rem);
+         }
+      }
+
+      &_genre {
+         border-radius: 5px;
+         padding: 1px 2px;
+   
+         &:not(:last-child) {
+            margin-right: 10px;
+         }
+      }
+
+      &_price {
+         position: relative;
+         text-align: end;
+         width: 100%;
+
+         @media(max-width: 800px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            font-size: clamp(0.625rem, 0.446rem + 0.9vw, 1.063rem);
+         }
+
+         & button {
+            position: absolute;
+            padding: 10px 25px;
+            right: 5px;
+            bottom: 10px;
+            font-size: clamp(0.625rem, 0.446rem + 0.9vw, 1.063rem);
+
+            @media(max-width: 800px) {
+               position: static;
+               padding: clamp(0.438rem, 0.361rem + 0.38vw, 0.625rem);
+            }
+         }
+      }
+   }
+
+
+   &_empty {
+      background-color: rgb(37, 35, 47);
+      text-align: center;
+      height: 80vh;
+      border-radius: 20px;
+
+      & h1 {
+         margin: 10px auto;
+         font-size: clamp(1.563rem, 1.383rem + 0.9vw, 2rem);
+      }
+
+      & img {
+         max-width: 350px;
+         width: 100%;
+         margin: 50px auto;
+         padding: 0 20px;
+      }
+
+      &-link {
+         margin: 50px auto;
+
+         & a {
+            font-size: clamp(0.813rem, 0.736rem + 0.38vw, 1rem);
+            padding: 7px;
+            background-color: #800;
+            border-radius: 10px;
+            transition: background .2s;
+
+            @media(hover: hover) {
+               &:hover  {
+                  background-color: #292999;
+               }
+            }
+         }
+      }
+   }
+}
