@@ -9,7 +9,6 @@
 
    &_empty {
       text-align: center;
-      // padding-top: 10px;
       width: 32.7%;
       min-height: 30px;
 
@@ -139,7 +138,7 @@
          }
 
       &_title {
-         font-size: clamp(0.938rem, 0.707rem + 1.15vw, 1.5rem);
+         font-size: clamp(1.125rem, 1.048rem + 0.38vw, 1.313rem);
          
 
          @media(max-width: 800px) {
@@ -154,7 +153,7 @@
 
          @media(max-width: 800px) {
             position: inherit;
-            font-size: clamp(0.625rem, 0.548rem + 0.38vw, 0.813rem);
+            font-size: clamp(0.688rem, 0.604rem + 0.42vw, 0.813rem);
          }
       }
 
@@ -199,7 +198,7 @@
    &_empty {
       background-color: rgb(37, 35, 47);
       text-align: center;
-      height: 80vh;
+      height: 50vh;
       border-radius: 20px;
 
       & h1 {
@@ -208,9 +207,9 @@
       }
 
       & img {
-         max-width: 350px;
+         max-width: 200px;
          width: 100%;
-         margin: 50px auto;
+         margin: 20px auto;
          padding: 0 20px;
       }
 
@@ -219,7 +218,7 @@
 
          & a {
             font-size: clamp(0.813rem, 0.736rem + 0.38vw, 1rem);
-            padding: 7px;
+            padding: 5px;
             background-color: #800;
             border-radius: 10px;
             transition: background .2s;

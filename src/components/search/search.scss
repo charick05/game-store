@@ -4,6 +4,11 @@
    align-items: center;
    right: 15%;
 
+   @media(max-width: 665px) {
+      bottom: -30px;
+      right: 10px;
+   }
+
 
    & input {
       width: auto;
@@ -21,29 +26,25 @@
          max-width: 450px;
          width: 100%;
       }
+   }
+
+   &_icon {
+      width: 35px;
+      height: 35px;
 
       @media(max-width: 665px) {
+         width: 24px;
+         height: 24px;
          position: absolute;
-         right: 30px;
-         bottom: -50px;
-         width: 50vw;
-         z-index: 3;
-
-         &:focus {
-            width: 50vw;
-         }
+         right: 15px;
+         opacity: .7;
       }
    }
 
    &_clear {
       position: absolute;
-      right: 45px;
+      right: 15px;
       cursor: pointer;
       fill: #8e8aa8;
-      z-index: 3;
-
-      @media(max-width: 665px) {
-         bottom: -46px;
-      }
    }
 }
