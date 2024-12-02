@@ -21,6 +21,7 @@ const Header: React.FC = () => {
       <div className="header">
         <Link to="/">
           <div className='header_logo'>
+              <img src="sami.png" alt="" />
               <img src="game-logo.png" alt="" />
               <h1>store</h1>
           </div>
